@@ -1,0 +1,252 @@
+Porque eu n consegui colocar border-bottom: 1px solid #001122 ? tive que criar uma di separadapra fazer dar certo
+
+Havia colocado o ::before no body - n aparecia pois eu n tinha definido qual era o display do ::beforeou sua position absolute 
+
+duvida 
+  pq quando tem mts info em cascata no css n exibe ?  
+  legend label {}  >  form fieldset legend label {}
+
+    outro exemplo
+
+    .col-3{    ---> este funcionou
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    .fieldset-wrapper .col-3{    ---> este n funcionou pq ?
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+
+          para os campos dentro da legend DIA E HORA ocuparem toda linha stretch qual pripriedade eu devo usar ?
+          
+          já que o align-items: stretch n funciona, eu devo escolher a width de cada campo ? 
+
+          - o que fiz nada n soube resolver
+          - colocar a width desse campo DATA = 100%  usando aquele jeito de chamar a primeira div filha 
+
+                colo alinhar no mesmo eixo horizontal a label + seu span ?
+                
+                label span { 
+                  margin: 2px 0px;
+                  padding: 0;
+                }
+
+                o span tem 20px de line-height != 24px da label   logo coloquei margin no span pois o align items n funcionou
+
+                na verdade não estava funcionando pelo fato de eu colocar o align-items dentro do span e n da label pois lembre-se que a tag span esta dentro da label
+
+                label     <div pai>
+                    texto
+                    span            <div filha>
+
+              
+
+
+
+
+
+
+
+Erro - n fiz de um por um 
+     - achar que tem tempo para tentar relembrar sozinho 
+     -n lembrar como organiza a div wrapper
+
+
+     
+
+FORMULA cada video assistido + faz + anota o que fez 
+
+[fontes utilizadas](https://fonts.google.com/share?selection.family=Archivo:wght@700%7CPoppins:wght@400;600)
+
+
+duvida 
+
+legend label{
+  color: red;
+
+  display: flex;
+  flex-direction: column ;
+
+  margin-bottom:  10px;
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+
+}
+
+
+
+form fieldset legend label{
+  color: red;
+
+  display: flex;
+  flex-direction: column ;
+
+  margin-bottom:  10px;
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+
+}
+
+
+
+por que o 2 n funcionou ?
+
+
+
+
+
+fieldset
+  legend
+
+
+
+  flex-direction: column ;
+   box-sizing: border-box;
+
+    elemento::before{   
+      content=''
+
+    }
+
+    elemento::after{
+      content=''
+    }
+      z-index
+
+
+::::::::  insights ::::::::::
+
+*{
+  box-sizing: border-box;
+}
+
+quando for ensinar meu curso de front end falar sobre 
+                        -codigo e + funcionalidade
+
+                      colocar uma propriedade para cada elemento html 
+
+                      :::::::::::::::::::::::::primeiro video
+
+
+                      elemento 1 {
+                        tal configuração em css;
+                      }
+
+
+                      elemento 2 {
+                        tal configuração em css;
+                      }
+
+
+                      elemento 3 {
+                        tal configuração em css;
+                      }
+
+
+                      elemento 4 {
+                        tal configuração em css;
+                      }
+
+
+                      elemento 5 {
+                        tal configuração em css;
+                      }
+
+
+                      elemento 6 {
+                        tal configuração em css;
+                      }
+
+
+                      elemento 7 {
+                        tal configuração em css;
+                      }
+
+
+                      :::::::::::::::::::segundo video
+
+                      *{
+                        tal configuração em css;
+                      }
+
+
+
+----:::---:::---:::-BUG DO FIELDSET NÃO INCLUIR O LEGEND COMO CAIXA FILHO PARA ESPAÇAMENTO GAP----:::---:::---:::---
+
+ <fieldset>
+          
+          <legend>Informações do Evento</legend>
+
+          <div class="input-wrapper">
+
+            <label for="event-title">Título do evento<span>(mínimo 8 caracteres)</span></label>
+            <input type="text" id="event-title"/>    <!-- tirei o name="event-title" pois n vou enviar ele para lugar algum -->
+
+          </div>
+
+          <div class="input-wrapper">
+
+            <label for="event-link">Link do evento<span>(começe com http://)</span></label>
+            <input type="text" id="link"/>    <!-- tirei o name="event-title" pois n vou enviar ele para lugar algum -->
+
+          </div>
+
+AQUI EU TENHO 3 CAIXAS DENTRO DO FIELDSET mas  somente vai ser considerado as 2 ultimas caixas mesmo se colocar um 
+  DISPLAY:flex
+SOLUÇÃO : COLOCAR UMA DIV empacotando todas as caixas dentro de FIELDSET   
+e 
+em vez de aplicar as propriedade css diretamente na tag < fieldset> eu aplico na div que  empacotei
+
+melhhor fazer assim 
+
+1srt faz a estrutura de um 
+  PADRONIZA
+    só add os novos
+
+do que 
+
+1srt faz a estrutura de um 
+  N PADRONIZA
+adiciona um 
+  faz a estrutura do outro 
+  N PADRONIZA 
+  adiciona outro
+      faz a estrutura do outro 
+      N PADRONIZA 
+      adiciona outro
+        faz a estrutura do outro 
+        N PADRONIZA 
+        adiciona outro
+
+
+Pseudo Classes usadas 
+
+:hover 
+:checked
+:focus
+:invalid
+
+para validar os valores digitados nos campos pelo usuário 
+requeired no html 
+  para fazer o botão enviar as coisas dentro do form 
+  deve ter um atributo     form    linkando com o id do formulario
+
+  no pedaço mais detalhes eu coloco um exemplo real de check box estilizado
+
+
+
+
+
+
+
+
+

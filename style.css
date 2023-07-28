@@ -1,0 +1,346 @@
+*{
+  box-sizing: border-box;
+}
+
+
+body{
+  margin: 0;
+  padding: 0;
+
+  background: #D9D9D9;
+}
+
+body::before{
+  content: '';
+  
+  width: 100%;  /* width : 1440px;*/
+  height: 368px;
+
+  background: #121214;
+
+  position: absolute; /* ou display block*/
+  top: 0;
+  left: 0;
+  
+  z-index: -1 ;
+}
+
+form{
+  background: #FAFAFC;
+  padding: 64px;
+}
+
+
+header{
+  width: 319px;
+  height: 160px;
+
+  margin-top: 80px;
+  margin-bottom: 42px;
+}
+
+header h1, fieldset legend, footer button{
+  font-family: 'Archivo', sans-serif;
+}
+
+header p , legend label{
+  font-family: 'Poppins', sans-serif;
+}
+
+header h1{
+  color: #FFF;
+
+  margin-bottom: 24px;
+
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 42px;
+
+}
+
+header p{
+  color: #42D3FF; 
+
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 26px;
+}
+
+#page{
+  width: 736px;
+
+  margin: 0 auto;
+}
+
+form{
+  background-color: #FAFAFC;
+
+  border-radius: 8px 8px 0px 0px;
+
+  min-height: 400px;
+
+  padding: 64px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+form fieldset{   
+  border: none;  
+}
+
+.field-wrapper { 
+  display: flex;
+  flex-direction: column;  
+  gap: 24px;
+}
+
+.col-3{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+
+  margin: 0;
+  padding: 0;
+}
+
+.col-3 .input-wrapper{
+  height: 88px;
+  gap: 12px;
+}
+
+.col-3 >div:nth-child(1){
+  width: 100%;
+}
+
+form fieldset legend{
+  color: #32264d;
+
+  padding-bottom: 16px;
+
+  width: 100%;
+
+  color:  #32264D;
+  
+  font-size: 24px;
+ 
+  font-weight: 600;
+  line-height: 34px; /* 141.667% */
+
+  border-bottom: 2px solid #E6E6F0;
+}
+
+
+
+/*
+#separador{
+  height: 2px;
+  width: 608px;
+
+  background-color: #E6E6F0;
+  
+ 
+}
+
+
+legend label{    --este codigo era para ser pra div q guarda label + input 
+  color: red;
+
+  display: flex;
+  flex-direction: column ;
+
+  margin-bottom:  24px 0px;
+
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 24px;
+
+}
+*/
+
+.input-wrapper{    
+
+  display: flex;
+  flex-direction: column ;
+
+  margin: 24px 0px 0px 0px;
+}
+
+.input-wrapper label , .checkbox-wrapper{
+  display: inherit;
+  gap: 12px;
+
+  font-size: 14px;
+  line-height: 24px;
+
+  color: #4E4958;
+  margin-bottom: 8px;
+
+  align-items: center;
+
+}
+
+label span{
+  color: #C1BCCC;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.input-wrapper input,  .input-wrapper textarea, .input-wrapper select {
+  border-radius: 8px;
+  border: 1px solid #E6E6F0;
+  
+  background: #FAFAFC;
+  color: #C1BCCC; 
+  height: 56px;
+  padding: 0 24px;
+
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.input-wrapper textarea{
+  padding: 24px;
+  height: 168px;
+}
+
+.input-wrapper label span:hover,.input-wrapper input:hover {
+/*  color: #C1BCCC;   */
+  color: #707070;
+}
+
+
+.input-wrapper select{
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1_54)'%3E%3Cpath d='M8 10L12 14L16 10' stroke='%239C98A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1_54'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+  
+  background-repeat: no-repeat;
+  
+  background-position: right 24px top 50%;
+
+}
+
+
+.checkbox-wrapper{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  height: 24px;
+  
+  margin: 24px 0px 0px 0px ;
+  padding: 0px;
+
+  color: #4E4958;
+  font-size: 14px;
+  line-height: 24px
+}
+
+/*
+.checkbox-wrapper input{
+  display: none;
+}
+
+*/
+
+.checkbox-wrapper label{
+  display: flex;
+  gap: 16px;
+}
+.checkbox-wrapper label::before {
+  content: ''; 
+
+  display: block;
+  
+  height: 24px;
+  width : 24px;
+
+  border: 1px solid #4E4958;
+
+  border-radius: 8px;
+}
+
+.checkbox-wrapper input:checked + label::before{
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1927_23)'%3E%3Cpath d='M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z' fill='%2342D3FF'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1927_23'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+
+}
+
+.checkbox-wrapper input:focus + label::before{
+  outline: 2px solid #000;
+}
+
+.checkbox-wrapper{
+  position: relative;
+}
+
+.checkbox-wrapper label::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.checkbox-wrapper input{
+  opacity: 0;
+}
+
+
+footer{
+  background-color: #F0F0F4;
+  color: #F0F0F4 ;
+
+  border-top: 1px solid #D6D6D6;
+
+  width: 736px;
+  height: 136px;
+  margin: 0px auto 20px;
+
+  border-radius: 0px 0px 8px 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .button{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 608px;
+  height: 56px;
+
+  margin: 60px 40px;
+  padding: 15px 40px;
+
+  border-radius: 8px;
+  border: 0px;
+
+  background-color: #04D361;
+  color: #FFF;
+
+  font-size: 16px;
+  font-weight: 600;     /*semi bold*/
+  line-height: 26px;
+}
+
+.button:hover{
+  background-color: #00ad4e;
+}
+
+.details a{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  color: #FFF;
+  
+  padding: 10px;
+  
+  border-radius: 8px;
+
+  background-color: #4E4958;
+}

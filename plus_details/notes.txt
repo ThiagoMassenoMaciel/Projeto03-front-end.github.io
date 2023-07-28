@@ -1,0 +1,48 @@
+Este pedaço foi feito com o intuito de praticar a estilização do checkbox 
+-colocando ele como invisivel
+-colocando uma ::before no canto dele com bordas
+-e uma imagen ( svg 🔁base64 ) pseudoclasse  pra simular a confirmação do click neste content vazio. com o v estilizado
+
+  /* para colocar um elemento html(label) ao lado de seu ::before é colocar nela display : flex    e um gap nela mesma para ficar distante do seu ::before*/
+
+      diferença entre usar + ou , com elementos estilizados no css
+      .wrapper input + label{
+        border: 10px solid red;
+      }
+      /*tem diferença entre estes dois ?*/
+      .wrapper input , label{
+        border: 10px solid red;
+        outline: 10px solid rgb(54, 35, 35); /*significa uma borda contornando todas a caixas filhas do selecionado dentro dele*/
+      }
+
+              display: block;  /*obrigatorio para exibir o quadrado*/
+
+
+                          centralizar um elemento e seu ::before atraves da div pai - não funciona
+
+                          align-items: center;  /*Eu so tenho um elemento  label + seu before logo n tem como alinhar label + outro ja que ela está soziha  então coloque uma align items dentro da propria label*/
+
+::PORQUE ESTE FUNCIONA 
+  .wrapper input:checked + label::before{
+  background-color: #232020;
+}
+
+::E ESTE NÃO FUNCIONA ?
+
+.wrapper input:checked + .wrapper label::before{
+  background-color: #232020;
+}
+
+
+
+
+link da imagem dentro da checkbox 
+
+background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1927_23)'%3E%3Cpath d='M9 16.17L4.83 12L3.41 13.41L9 19L21 7L19.59 5.59L9 16.17Z' fill='%2342D3FF'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1927_23'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+
+
+
+
+
+vai ficar sobreposto aquela caixinha mais importante para ele 
+  a div filha vai ficar sobreposta a div pai 
